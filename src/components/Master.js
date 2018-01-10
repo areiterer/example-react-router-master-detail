@@ -4,6 +4,11 @@ import { Route, Link } from "react-router-dom";
 
 import Detail from "./Detail";
 
+const style = {
+  nav: {
+    listStyle: "none"
+  }
+};
 class Master extends Component {
   render() {
     const { match, items } = this.props;
@@ -20,7 +25,7 @@ class Master extends Component {
 
     return (
       <div>
-        <ul>{listItems}</ul>
+        <ul style={style.nav}>{listItems}</ul>
 
         <hr />
 

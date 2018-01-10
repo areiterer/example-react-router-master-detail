@@ -1,12 +1,18 @@
 import React from "react";
 
+const style = {
+  wrapper: {
+    margin: "40px"
+  }
+};
+
 const Detail = ({ item }) => {
   if (!item) {
     return <div>Loading ...</div>;
   }
 
   return (
-    <div>
+    <div style={style.wrapper}>
       Detailed info
       <p>
         <strong>Name:</strong> {item.name}

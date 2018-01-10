@@ -5,6 +5,13 @@ import "./App.css";
 import { Route, Link } from "react-router-dom";
 import Master from "./components/Master";
 
+const style = {
+  nav: {
+    margin: "20px",
+    marginLeft: "40px"
+  }
+};
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -20,13 +27,15 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Welcome to React Master / Detail</h1>
         </header>
 
-        <Link to="/persons">Persons</Link>
+        <div style={style.nav}>
+          <Link to="/persons">Persons</Link>
+        </div>
         <hr />
 
         <Route
